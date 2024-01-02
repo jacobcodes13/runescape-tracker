@@ -18,8 +18,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(firebaseApp);
-const db = getFirestore(firebaseApp);
+const auth = getAuth(app);
+const db = getFirestore(app);
 const todosCol = collection(db, 'todos');
 const snapshot = await getDocs(todosCol)
 
